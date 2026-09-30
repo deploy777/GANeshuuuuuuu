@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>Magi Sri Rama Satya Ganesh | AI & Full-Stack Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Magi Sri Rama Satya Ganesh - Computer Science & Artificial Intelligence Graduate, Frontend Developer, and AI/ML Engineer.">
+  <meta name="keywords" content="Magi Sri Rama Satya Ganesh, AI Developer, Frontend Engineer, Computer Vision, Machine Learning, Portfolio, 3D Portfolio">
+  <meta name="author" content="Magi Sri Rama Satya Ganesh">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Magi Sri Rama Satya Ganesh | AI & Frontend Engineer">
+  <meta property="og:description" content="Interactive 3D Glass Laboratory Portfolio at the intersection of Code & AI.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+  <!-- Custom Futuristic Glowing Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Background Canvas for Ambient Starfield & Particles -->
+  <canvas id="ambientCanvas" class="ambient-canvas"></canvas>
+
+  <!-- Ambient Ambient Glow Orbs -->
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <div class="glow-orb glow-orb-3"></div>
+
+  <!-- Audio Effects Toggle & Accessibility Controls -->
+  <div class="floating-controls">
+    <button id="soundToggle" class="glass-control-btn" title="Toggle Futuristic Audio Feedback" aria-label="Toggle Sound">
+      <i class="fa-solid fa-volume-high"></i>
+      <span class="control-tooltip">Audio FX: ON</span>
+    </button>
+  </div>
+
+  <!-- Navigation -->
+  <header class="glass-nav-container" id="mainHeader">
+    <nav class="glass-nav">
+      <a href="#hero" class="nav-logo" id="navLogo">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-text">GANESH<span class="accent-dot">.DEV</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+        <li><a href="#achievements" class="nav-link" data-section="achievements">Achievements</a></li>
+        <li><a href="#resume" class="nav-link" data-section="resume">Resume</a></li>
+        <li><a href="#contact" class="nav-link contact-pill" data-section="contact">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        <!-- Left Hero Content -->
+        <div class="hero-content">
+          <div class="status-badge-container">
+            <div class="glass-status-badge">
+              <span class="pulse-indicator"></span>
+              <span class="status-text">AVAILABLE FOR OPPORTUNITIES</span>
+            </div>
+          </div>
+
+          <h1 class="hero-headline">
+            BUILDING IDEAS AT THE INTERSECTION OF <span class="gradient-text">CODE &amp; AI.</span>
+          </h1>
+
+          <div class="hero-identity">
+            <h2 class="hero-name">Magi Sri Rama Satya Ganesh</h2>
+            <p class="hero-subtitle">
+              <i class="fa-solid fa-microchip accent-icon"></i>
+              Computer Science &amp; Artificial Intelligence Graduate
+            </p>
+          </div>
+
+          <p class="hero-description">
+            Passionate about frontend development, Python, machine learning, computer vision, and building interactive technology-driven experiences.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn-glass primary-glass-btn" id="exploreWorkBtn">
+              <span class="btn-text">Explore My Work</span>
+              <i class="fa-solid fa-arrow-down-long btn-icon"></i>
+              <span class="btn-shimmer"></span>
+            </a>
+            <a href="#resume" class="btn-glass secondary-glass-btn" id="heroResumeBtn">
+              <span class="btn-text">View Resume</span>
+              <i class="fa-solid fa-file-lines btn-icon"></i>
+            </a>
+          </div>
+
+          <!-- Quick Metrics Bar -->
+          <div class="hero-quick-stats">
+            <div class="stat-pill">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Internships</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-pill">
+              <span class="stat-number">4+</span>
+              <span class="stat-label">Key Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-pill">
+              <span class="stat-number">7.4</span>
+              <span class="stat-label">B.Tech CGPA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero: 3D Holographic AI Orb & Floating Glass Chips -->
+        <div class="hero-orb-wrapper">
+          <div class="orb-canvas-container" id="orbCanvasContainer">
+            <!-- Three.js Canvas injected here -->
+            <canvas id="threeOrbCanvas"></canvas>
+            
+            <!-- Glass Core Info Overlay -->
+            <div class="orb-center-badge">
+              <div class="orb-core-pulse"></div>
+              <span class="orb-core-title">AI KERNEL</span>
+              <span class="orb-core-sub">ACTIVE</span>
+            </div>
+
+            <!-- Floating 3D Glass Labels -->
+            <div class="floating-chip chip-1" data-depth="0.3"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="floating-chip chip-2" data-depth="0.5"><i class="fa-solid fa-brain"></i> AI / ML</div>
+            <div class="floating-chip chip-3" data-depth="0.2"><i class="fa-solid fa-eye"></i> Computer Vision</div>
+            <div class="floating-chip chip-4" data-depth="0.6"><i class="fa-brands fa-js"></i> JavaScript</div>
+            <div class="floating-chip chip-5" data-depth="0.4"><i class="fa-brands fa-html5"></i> HTML</div>
+            <div class="floating-chip chip-6" data-depth="0.5"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+            <div class="floating-chip chip-7" data-depth="0.3"><i class="fa-solid fa-database"></i> SQL</div>
+          </div>
+          <div class="orb-hint"><i class="fa-solid fa-arrows-up-down-left-right"></i> Move cursor to interact with AI Core</div>
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <a href="#about" class="scroll-down-indicator" aria-label="Scroll to About section">
+        <span class="mouse-icon">
+          <span class="mouse-wheel"></span>
+        </span>
+        <span class="scroll-text">DISCOVER MORE</span>
+      </a>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section-padding">
+      <div class="section-header">
+        <span class="section-tag">OVERVIEW</span>
+        <h2 class="section-title">A LITTLE ABOUT ME</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <!-- Main Bio Glass Card -->
+        <div class="glass-card about-bio-card tilt-element">
+          <div class="card-glass-reflection"></div>
+          <div class="bio-top">
+            <div class="icon-avatar">
+              <i class="fa-solid fa-user-astronaut"></i>
+            </div>
+            <div>
+              <h3 class="bio-name">Magi Sri Rama Satya Ganesh</h3>
+              <p class="bio-role">Computer Science &amp; Artificial Intelligence Specialist</p>
+            </div>
+          </div>
+
+          <div class="bio-body">
+            <p class="lead-text">
+              B.Tech graduate in <strong>Computer Science and Artificial Intelligence</strong> from 
+              <span class="highlight-text">Kakinada Institute of Engineering and Technology</span>.
+            </p>
+            <p class="secondary-text">
+              Equipped with strong algorithmic foundations and hands-on experience in modern frontend development, 
+              computer vision, and machine learning pipelines. Driven by the vision to create aesthetic, intelligent, 
+              and intuitive interfaces that solve real-world problems.
+            </p>
+          </div>
+
+          <div class="about-meta-grid">
+            <div class="meta-item">
+              <span class="meta-label"><i class="fa-solid fa-graduation-cap"></i> Degree</span>
+              <span class="meta-value">B.Tech (CS &amp; AI)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label"><i class="fa-solid fa-university"></i> Institution</span>
+              <span class="meta-value">Kakinada Institute of Engg. &amp; Tech</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label"><i class="fa-solid fa-bullseye"></i> Focus Areas</span>
+              <span class="meta-value">Frontend, AI/ML, Vision</span>
+            </div>
+          </div>
+
+          <!-- Floating Skill Tags / Chips -->
+          <div class="about-chips-container">
+            <div class="about-chip"><i class="fa-solid fa-code"></i> Computer Science</div>
+            <div class="about-chip"><i class="fa-solid fa-network-wired"></i> Artificial Intelligence</div>
+            <div class="about-chip"><i class="fa-solid fa-laptop-code"></i> Frontend Development</div>
+            <div class="about-chip"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="about-chip"><i class="fa-solid fa-chart-line"></i> Machine Learning</div>
+            <div class="about-chip"><i class="fa-solid fa-camera"></i> Computer Vision</div>
+          </div>
+        </div>
+
+        <!-- 3D Glass Circular Progress & Academic Metrics -->
+        <div class="glass-card about-metrics-card tilt-element">
+          <div class="card-glass-reflection"></div>
+          <div class="card-header-sub">
+            <span class="sub-badge"><i class="fa-solid fa-chart-pie"></i> ACADEMIC EXCELLENCE</span>
+            <div class="hologram-dot"></div>
+          </div>
+
+          <h3 class="metric-title">Cumulative Grade Point</h3>
+
+          <!-- 3D Glass Circular Progress Gauge -->
+          <div class="circular-gauge-container">
+            <div class="circular-gauge-3d">
+              <svg class="progress-ring" width="220" height="220">
+                <defs>
+                  <linearGradient id="cyanPurpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00f0ff" />
+                    <stop offset="50%" stop-color="#38bdf8" />
+                    <stop offset="100%" stop-color="#818cf8" />
+                  </linearGradient>
+                  <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="4" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+                <circle class="progress-ring-bg" stroke="rgba(255, 255, 255, 0.06)" stroke-width="14" fill="transparent" r="88" cx="110" cy="110" />
+                <circle class="progress-ring-circle" id="cgpaProgressCircle" stroke="url(#cyanPurpleGradient)" stroke-width="14" stroke-linecap="round" fill="transparent" r="88" cx="110" cy="110" filter="url(#glowEffect)" />
+              </svg>
+              
+              <!-- Center 3D Glass Reading -->
+              <div class="gauge-center-content">
+                <span class="gauge-score-value" id="cgpaScore">7.4</span>
+                <span class="gauge-scale">/ 10 CGPA</span>
+                <div class="gauge-stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3D Animated Graduation Cap Interactive Object -->
+          <div class="grad-cap-container" id="gradCapBox">
+            <div class="grad-cap-3d-model">
+              <div class="cap-rhombus">
+                <div class="cap-center-button"></div>
+                <div class="cap-tassel"></div>
+              </div>
+              <div class="cap-skull"></div>
+            </div>
+            <div class="grad-info">
+              <span class="grad-status"><i class="fa-solid fa-certificate"></i> Graduated with Honors</span>
+              <span class="grad-sub">KIET • Kakinada, Andhra Pradesh</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION: 3D SKILL CONSTELLATION -->
+    <section id="skills" class="section-padding">
+      <div class="section-header">
+        <span class="section-tag">COMPETENCY ARCHITECTURE</span>
+        <h2 class="section-title">INTERACTIVE SKILL CONSTELLATION</h2>
+        <div class="section-line"></div>
+        <p class="section-desc">Explore the 3D constellation. Hover or rotate to examine core technical pillars and proficiencies.</p>
+      </div>
+
+      <div class="skills-constellation-container">
+        <!-- Interactive 3D constellation field -->
+        <div class="constellation-3d-stage" id="constellationStage">
+          <!-- Central Glowing Glass Sphere -->
+          <div class="constellation-center-core" id="coreSphere">
+            <div class="core-outer-halo"></div>
+            <div class="core-inner-glow"></div>
+            <div class="core-text-wrap">
+              <i class="fa-solid fa-atom core-icon-spin"></i>
+              <span class="core-title">TECH STACK</span>
+              <span class="core-subtitle">CORE MATRIX</span>
+            </div>
+          </div>
+
+          <!-- Orbiting 3D Glass Skill Cards -->
+          <div class="constellation-cards" id="constellationCards">
+            <!-- Python -->
+            <div class="constellation-card" data-skill="Python" data-category="Language / AI" data-info="Versatile programming for machine learning, OpenCV automation, backend logic, and data analysis.">
+              <div class="card-icon-box"><i class="fa-brands fa-python"></i></div>
+              <span class="card-title">PYTHON</span>
+              <span class="card-level">Advanced</span>
+            </div>
+
+            <!-- SQL -->
+            <div class="constellation-card" data-skill="SQL" data-category="Database" data-info="Relational database schema modeling, complex queries, indexing, joins, and transaction management.">
+              <div class="card-icon-box"><i class="fa-solid fa-database"></i></div>
+              <span class="card-title">SQL</span>
+              <span class="card-level">Proficient</span>
+            </div>
+
+            <!-- HTML -->
+            <div class="constellation-card" data-skill="HTML" data-category="Frontend Core" data-info="Semantic HTML5 architecture, accessible DOM structures, SEO optimizations, and modern web standards.">
+              <div class="card-icon-box"><i class="fa-brands fa-html5"></i></div>
+              <span class="card-title">HTML</span>
+              <span class="card-level">Advanced</span>
+            </div>
+
+            <!-- CSS -->
+            <div class="constellation-card" data-skill="CSS" data-category="Styling / UI" data-info="Modern responsive layouts, Flexbox/Grid, Glassmorphism, animations, keyframes, and CSS variables.">
+              <div class="card-icon-box"><i class="fa-brands fa-css3-alt"></i></div>
+              <span class="card-title">CSS</span>
+              <span class="card-level">Advanced</span>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="constellation-card" data-skill="JavaScript" data-category="Frontend Core" data-info="Modern ES6+, DOM manipulation, asynchronous programming, Web APIs, and dynamic interactive interfaces.">
+              <div class="card-icon-box"><i class="fa-brands fa-js"></i></div>
+              <span class="card-title">JAVASCRIPT</span>
+              <span class="card-level">Proficient</span>
+            </div>
+
+            <!-- Machine Learning -->
+            <div class="constellation-card" data-skill="Machine Learning" data-category="Artificial Intelligence" data-info="Supervised/Unsupervised models, scikit-learn, training pipelines, classification, regression, and data evaluation.">
+              <div class="card-icon-box"><i class="fa-solid fa-brain"></i></div>
+              <span class="card-title">MACHINE LEARNING</span>
+              <span class="card-level">Specialized</span>
+            </div>
+
+            <!-- Computer Vision -->
+            <div class="constellation-card" data-skill="Computer Vision" data-category="AI / Image Processing" data-info="OpenCV, Haar cascades, facial landmarks, real-time image processing, edge detection, and recognition systems.">
+              <div class="card-icon-box"><i class="fa-solid fa-eye"></i></div>
+              <span class="card-title">COMPUTER VISION</span>
+              <span class="card-level">Specialized</span>
+            </div>
+
+            <!-- Git -->
+            <div class="constellation-card" data-skill="Git" data-category="Version Control" data-info="Branching strategies, commit history, merge conflicts resolution, and distributed repository control.">
+              <div class="card-icon-box"><i class="fa-brands fa-git-alt"></i></div>
+              <span class="card-title">GIT</span>
+              <span class="card-level">Proficient</span>
+            </div>
+
+            <!-- GitHub -->
+            <div class="constellation-card" data-skill="GitHub" data-category="Collaboration" data-info="Repository hosting, pull requests, code reviews, releases, and CI/CD project workflows.">
+              <div class="card-icon-box"><i class="fa-brands fa-github"></i></div>
+              <span class="card-title">GITHUB</span>
+              <span class="card-level">Proficient</span>
+            </div>
+
+            <!-- Chrome Extensions -->
+            <div class="constellation-card" data-skill="Chrome Extensions" data-category="Browser Tooling" data-info="Manifest V3 architecture, background service workers, content scripts, storage APIs, and browser popup interfaces.">
+              <div class="card-icon-box"><i class="fa-brands fa-chrome"></i></div>
+              <span class="card-title">CHROME EXTENSIONS</span>
+              <span class="card-level">Specialized</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Skill Detail Telemetry Panel -->
+        <div class="skill-telemetry-glass" id="skillTelemetry">
+          <div class="telemetry-header">
+            <div class="telemetry-status">
+              <span class="pulse-cyan"></span>
+              <span id="telemetryCategory">SYSTEM READY</span>
+            </div>
+            <span class="telemetry-id">ID: 0xTECH_NODE</span>
+          </div>
+          <h4 class="telemetry-title" id="telemetryTitle">Hover on any Skill Card</h4>
+          <p class="telemetry-body" id="telemetryBody">Interact with the orbital 3D cards above to view in-depth architectural details, mastery ratings, and technical application scopes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION: 3D VERTICAL TIMELINE -->
+    <section id="experience" class="section-padding">
+      <div class="section-header">
+        <span class="section-tag">CAREER PATHWAY</span>
+        <h2 class="section-title">EXPERIENCE / LEARNING JOURNEY</h2>
+        <div class="section-line"></div>
+        <p class="section-desc">Interactive 3D vertical timeline tracing internship milestones and engineering responsibilities.</p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Glowing Vertical 3D Spine -->
+        <div class="timeline-spine">
+          <div class="timeline-spine-glow" id="timelineSpineGlow"></div>
+        </div>
+
+        <!-- Timeline Items (5 Internships) -->
+        <div class="timeline-items">
+          <!-- 1. Sirionex -->
+          <div class="timeline-item tilt-element" data-index="1">
+            <div class="timeline-node">
+              <div class="node-halo"></div>
+              <div class="node-dot">1</div>
+            </div>
+            <div class="timeline-glass-card">
+              <div class="card-glass-reflection"></div>
+              <div class="timeline-header-meta">
+                <span class="timeline-period"><i class="fa-regular fa-calendar"></i> May 2026 – Aug 2026</span>
+                <span class="timeline-badge role-badge">Software Dev</span>
+              </div>
+              <h3 class="timeline-company">Sirionex</h3>
+              <h4 class="timeline-role">Software Developer Intern</h4>
+              <p class="timeline-desc">
+                Engaged in developing robust software solutions, collaborating on feature implementations, testing logic, and optimizing code quality within engineering sprint cycles.
+              </p>
+              <div class="timeline-tags">
+                <span class="glass-tag">Software Development</span>
+                <span class="glass-tag">Code Optimization</span>
+                <span class="glass-tag">Collaboration</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. ApexPlanet Software Pvt. Ltd. -->
+          <div class="timeline-item tilt-element" data-index="2">
+            <div class="timeline-node">
+              <div class="node-halo"></div>
+              <div class="node-dot">2</div>
+            </div>
+            <div class="timeline-glass-card">
+              <div class="card-glass-reflection"></div>
+              <div class="timeline-header-meta">
+                <span class="timeline-period"><i class="fa-solid fa-briefcase"></i> Internship</span>
+                <span class="timeline-badge web-badge">Web Engineering</span>
+              </div>
+              <h3 class="timeline-company">ApexPlanet Software Pvt. Ltd.</h3>
+              <h4 class="timeline-role">Web Development Intern</h4>
+              <p class="timeline-desc">
+                Contributed to building and maintaining responsive web layouts, integrating interactive components, and ensuring cross-browser styling consistency.
+              </p>
+              <div class="timeline-tags">
+                <span class="glass-tag">Web Development</span>
+                <span class="glass-tag">HTML5 / CSS3</span>
+                <span class="glass-tag">Responsive Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Cognifyz Technologies -->
+          <div class="timeline-item tilt-element" data-index="3">
+            <div class="timeline-node">
+              <div class="node-halo"></div>
+              <div class="node-dot">3</div>
+            </div>
+            <div class="timeline-glass-card">
+              <div class="card-glass-reflection"></div>
+              <div class="timeline-header-meta">
+                <span class="timeline-period"><i class="fa-solid fa-laptop-code"></i> Internship</span>
+                <span class="timeline-badge fe-badge">Frontend Dev</span>
+              </div>
+              <h3 class="timeline-company">Cognifyz Technologies</h3>
+              <h4 class="timeline-role">Frontend Development Intern</h4>
+              <p class="timeline-desc">
+                Engineered intuitive client-facing web components, implemented UI/UX prototypes, and improved DOM performance and interactive accessibility standards.
+              </p>
+              <div class="timeline-tags">
+                <span class="glass-tag">Frontend Architecture</span>
+                <span class="glass-tag">JavaScript</span>
+                <span class="glass-tag">UI/UX Polish</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. EduSkills - Microchip -->
+          <div class="timeline-item tilt-element" data-index="4">
+            <div class="timeline-node">
+              <div class="node-halo"></div>
+              <div class="node-dot">4</div>
+            </div>
+            <div class="timeline-glass-card">
+              <div class="card-glass-reflection"></div>
+              <div class="timeline-header-meta">
+                <span class="timeline-period"><i class="fa-solid fa-microchip"></i> Virtual Internship</span>
+                <span class="timeline-badge embed-badge">Embedded Systems</span>
+              </div>
+              <h3 class="timeline-company">EduSkills</h3>
+              <h4 class="timeline-role">Microchip Embedded System Developer Virtual Internship</h4>
+              <p class="timeline-desc">
+                Gained practical exposure to embedded system architecture, microchip hardware-software interfacing, low-level programming concepts, and debugging protocols.
+              </p>
+              <div class="timeline-tags">
+                <span class="glass-tag">Microchip Tech</span>
+                <span class="glass-tag">Embedded Systems</span>
+                <span class="glass-tag">Hardware Interfaces</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. EduSkills - Python Full Stack -->
+          <div class="timeline-item tilt-element" data-index="5">
+            <div class="timeline-node">
+              <div class="node-halo"></div>
+              <div class="node-dot">5</div>
+            </div>
+            <div class="timeline-glass-card">
+              <div class="card-glass-reflection"></div>
+              <div class="timeline-header-meta">
+                <span class="timeline-period"><i class="fa-brands fa-python"></i> Virtual Internship</span>
+                <span class="timeline-badge fs-badge">Full Stack</span>
+              </div>
+              <h3 class="timeline-company">EduSkills</h3>
+              <h4 class="timeline-role">Python Full Stack Developer Virtual Internship</h4>
+              <p class="timeline-desc">
+                Completed comprehensive training across Python backend services, database connectivity, RESTful architectural principles, and frontend integration workflows.
+              </p>
+              <div class="timeline-tags">
+                <span class="glass-tag">Python Full Stack</span>
+                <span class="glass-tag">Database Ops</span>
+                <span class="glass-tag">API Integration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION: MAIN HIGHLIGHT -->
+    <section id="projects" class="section-padding">
+      <div class="section-header">
+        <span class="section-tag">ENGINEERING PORTFOLIO</span>
+        <h2 class="section-title">THINGS I'VE BUILT</h2>
+        <div class="section-line"></div>
+        <p class="section-desc">Interactive product showcases. Hover to inspect 3D perspective and click to open the full interactive breakdown.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- PROJECT 01: ANIME WEBSITE -->
+        <article class="project-glass-card tilt-element" data-project-id="p1">
+          <div class="card-glass-reflection"></div>
+          
+          <!-- Floating 3D Glass Browser Window Mockup -->
+          <div class="project-window-frame">
+            <div class="browser-topbar">
+              <div class="browser-controls">
+                <span class="window-dot red"></span>
+                <span class="window-dot yellow"></span>
+                <span class="window-dot green"></span>
+              </div>
+              <div class="browser-url-pill">
+                <i class="fa-solid fa-lock"></i> https://anime-hub.frontend.dev
+              </div>
+              <div class="browser-actions">
+                <i class="fa-solid fa-rotate-right"></i>
+              </div>
+            </div>
+            
+            <div class="browser-viewport anime-preview-viewport">
+              <div class="anime-hero-banner">
+                <div class="anime-tag-badge">FEATURED RELEASE</div>
+                <h4 class="anime-preview-title">CYBER SHINOBI : 2099</h4>
+                <div class="anime-meta-row">
+                  <span class="star-rating"><i class="fa-solid fa-star"></i> 9.8</span>
+                  <span class="genre-tag">Sci-Fi / Action</span>
+                  <span class="genre-tag">4K Ultra</span>
+                </div>
+              </div>
+              <div class="anime-carousel-mock">
+                <div class="anime-card-mock"><div class="mock-glow"></div>Episode 1</div>
+                <div class="anime-card-mock active-ep"><div class="mock-glow"></div>Episode 2</div>
+                <div class="anime-card-mock"><div class="mock-glow"></div>Episode 3</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card-details">
+            <div class="project-category-row">
+              <span class="project-category"><i class="fa-solid fa-layer-group"></i> Frontend Development</span>
+              <span class="project-num">01</span>
+            </div>
+            <h3 class="project-title">ANIME WEBSITE</h3>
+            <p class="project-excerpt">
+              An interactive frontend website for presenting anime content through a modern web interface.
+            </p>
+            <div class="project-tech-pills">
+              <span class="tech-pill">HTML5</span>
+              <span class="tech-pill">CSS3 Glassmorphism</span>
+              <span class="tech-pill">JavaScript ES6</span>
+              <span class="tech-pill">Responsive UI</span>
+            </div>
+            <button class="project-inspect-btn" onclick="openProjectModal('p1')">
+              <span>Inspect Project</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- PROJECT 02: CATCH THE ZORO -->
+        <article class="project-glass-card tilt-element" data-project-id="p2">
+          <div class="card-glass-reflection"></div>
+          
+          <!-- Floating 3D Game Console/Card Mockup -->
+          <div class="project-window-frame game-window-frame">
+            <div class="game-console-header">
+              <div class="console-logo"><i class="fa-solid fa-gamepad"></i> RETRO BROWSER ARCADE</div>
+              <div class="game-score-badge">SCORE: <span id="zoroScoreDemo">00</span></div>
+            </div>
+            
+            <div class="browser-viewport game-preview-viewport" id="zoroMiniGameArea">
+              <div class="game-hud">
+                <span class="hud-life"><i class="fa-solid fa-heart"></i> HP 100%</span>
+                <span class="hud-slash"><i class="fa-solid fa-wand-magic-sparkles"></i> 3-SWORD STYLE</span>
+              </div>
+              <!-- Interactive Zoro Character Token -->
+              <div class="zoro-target" id="zoroTarget" title="Click Zoro to test game mechanics!">
+                <div class="zoro-sprite">⚔️</div>
+                <div class="zoro-nametag">ZORO</div>
+              </div>
+              <div class="game-grid-lines"></div>
+              <div class="game-action-prompt">Interactive Sandbox • Click Zoro to catch him!</div>
+            </div>
+          </div>
+
+          <div class="project-card-details">
+            <div class="project-category-row">
+              <span class="project-category"><i class="fa-solid fa-gamepad"></i> Frontend / Browser Game</span>
+              <span class="project-num">02</span>
+            </div>
+            <h3 class="project-title">CATCH THE ZORO</h3>
+            <p class="project-excerpt">
+              An interactive browser-based game created using frontend technologies, featuring event-driven mechanics and dynamic difficulty.
+            </p>
+            <div class="project-tech-pills">
+              <span class="tech-pill">JavaScript Game Loop</span>
+              <span class="tech-pill">HTML5 Canvas / DOM</span>
+              <span class="tech-pill">CSS Keyframes</span>
+              <span class="tech-pill">Collision Logic</span>
+            </div>
+            <button class="project-inspect-btn" onclick="openProjectModal('p2')">
+              <span>Inspect Project</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- PROJECT 03: FACE RECOGNITION ATTENDANCE SYSTEM -->
+        <article class="project-glass-card tilt-element" data-project-id="p3">
+          <div class="card-glass-reflection"></div>
+          
+          <!-- Futuristic 3D Facial-Recognition Scanning Interface -->
+          <div class="project-window-frame scanner-window-frame">
+            <div class="scanner-topbar">
+              <div class="scanner-status-indicator">
+                <span class="live-rec-dot"></span>
+                <span>CV CAMERA STREAM • 60 FPS</span>
+              </div>
+              <span class="scanner-algo">ALGO: DLIB / HAAR</span>
+            </div>
+
+            <div class="browser-viewport scanner-viewport">
+              <div class="scan-laser-line"></div>
+              
+              <!-- 3D Face Wireframe Mesh Visualization -->
+              <div class="face-mesh-box">
+                <div class="mesh-corner top-left"></div>
+                <div class="mesh-corner top-right"></div>
+                <div class="mesh-corner bottom-left"></div>
+                <div class="mesh-corner bottom-right"></div>
+                
+                <!-- SVG Wireframe Face Target Points -->
+                <svg class="face-points-svg" viewBox="0 0 200 200">
+                  <polygon points="100,20 150,50 160,110 140,165 100,185 60,165 40,110 50,50" fill="none" stroke="rgba(0, 240, 255, 0.4)" stroke-dasharray="4,4" />
+                  <ellipse cx="100" cy="95" rx="55" ry="75" fill="none" stroke="rgba(0, 240, 255, 0.6)" stroke-width="1.5" />
+                  <!-- Eyes -->
+                  <circle cx="75" cy="85" r="7" fill="none" stroke="#00f0ff" stroke-width="1.5" />
+                  <circle cx="75" cy="85" r="2" fill="#00f0ff" />
+                  <circle cx="125" cy="85" r="7" fill="none" stroke="#00f0ff" stroke-width="1.5" />
+                  <circle cx="125" cy="85" r="2" fill="#00f0ff" />
+                  <!-- Nose bridge & tip -->
+                  <line x1="100" y1="85" x2="100" y2="115" stroke="#00f0ff" stroke-width="1.5" />
+                  <circle cx="100" cy="118" r="3" fill="#00f0ff" />
+                  <!-- Mouth contour -->
+                  <path d="M 80,140 Q 100,152 120,140" fill="none" stroke="#00f0ff" stroke-width="1.5" />
+                  <!-- Target reticle -->
+                  <circle cx="100" cy="100" r="85" fill="none" stroke="rgba(0, 240, 255, 0.2)" stroke-width="1" />
+                </svg>
+
+                <div class="face-tag-overlay">
+                  <span class="match-score">CONFIDENCE: 98.4%</span>
+                </div>
+              </div>
+
+              <!-- Scanning HUD Status Readouts -->
+              <div class="scanner-telemetry-overlay">
+                <div class="scanner-readout-item success">
+                  <i class="fa-solid fa-check"></i> Face Detection: <strong>CONFIRMED</strong>
+                </div>
+                <div class="scanner-readout-item success">
+                  <i class="fa-solid fa-id-card"></i> Identity: <strong>M.S.R.S. GANESH</strong>
+                </div>
+                <div class="scanner-readout-item success">
+                  <i class="fa-solid fa-clipboard-check"></i> Attendance: <strong>RECORDED (SUCCESS)</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card-details">
+            <div class="project-category-row">
+              <span class="project-category"><i class="fa-solid fa-eye"></i> Python / Computer Vision</span>
+              <span class="project-num">03</span>
+            </div>
+            <h3 class="project-title">FACE RECOGNITION ATTENDANCE SYSTEM</h3>
+            <p class="project-excerpt">
+              A Python-based attendance system using face recognition concepts to automate attendance recording with high accuracy and zero manual friction.
+            </p>
+            <div class="project-tech-pills">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">OpenCV</span>
+              <span class="tech-pill">Face Recognition API</span>
+              <span class="tech-pill">Attendance Automation</span>
+            </div>
+            <button class="project-inspect-btn" onclick="openProjectModal('p3')">
+              <span>Inspect Project</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- PROJECT 04: LINK SAVER -->
+        <article class="project-glass-card tilt-element" data-project-id="p4">
+          <div class="card-glass-reflection"></div>
+          
+          <!-- Floating 3D Browser Extension Window Mockup -->
+          <div class="project-window-frame extension-window-frame">
+            <div class="extension-header">
+              <div class="ext-brand">
+                <i class="fa-solid fa-bookmark ext-icon"></i>
+                <span class="ext-name">LinkSaver Pro</span>
+              </div>
+              <span class="ext-version">v1.2.0</span>
+            </div>
+            
+            <div class="browser-viewport extension-viewport">
+              <div class="ext-input-mock">
+                <span class="mock-url-text">https://github.com/developer/deep-learning</span>
+                <button class="ext-add-btn"><i class="fa-solid fa-plus"></i> Save</button>
+              </div>
+
+              <!-- Saved Links as Floating Glass Cards -->
+              <div class="ext-links-list">
+                <div class="ext-link-item">
+                  <div class="ext-link-icon"><i class="fa-brands fa-github"></i></div>
+                  <div class="ext-link-text">
+                    <span class="ext-link-title">Computer Vision Research Repo</span>
+                    <span class="ext-link-date">Saved Today • Tech</span>
+                  </div>
+                  <i class="fa-solid fa-arrow-up-right-from-square ext-mini-link"></i>
+                </div>
+
+                <div class="ext-link-item">
+                  <div class="ext-link-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+                  <div class="ext-link-text">
+                    <span class="ext-link-title">Three.js WebGL Documentation</span>
+                    <span class="ext-link-date">Saved Yesterday • Graphics</span>
+                  </div>
+                  <i class="fa-solid fa-arrow-up-right-from-square ext-mini-link"></i>
+                </div>
+
+                <div class="ext-link-item">
+                  <div class="ext-link-icon"><i class="fa-brands fa-python"></i></div>
+                  <div class="ext-link-text">
+                    <span class="ext-link-title">Python OpenCV Face Algorithms</span>
+                    <span class="ext-link-date">Saved 3 days ago • AI/ML</span>
+                  </div>
+                  <i class="fa-solid fa-arrow-up-right-from-square ext-mini-link"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card-details">
+            <div class="project-category-row">
+              <span class="project-category"><i class="fa-brands fa-chrome"></i> Chrome Extension / Frontend</span>
+              <span class="project-num">04</span>
+            </div>
+            <h3 class="project-title">LINK SAVER</h3>
+            <p class="project-excerpt">
+              A Chrome extension for saving and managing useful web links directly from the browser with quick categorize and export capabilities.
+            </p>
+            <div class="project-tech-pills">
+              <span class="tech-pill">Chrome Manifest V3</span>
+              <span class="tech-pill">Storage API</span>
+              <span class="tech-pill">JavaScript ES6</span>
+              <span class="tech-pill">Popup UI</span>
+            </div>
+            <button class="project-inspect-btn" onclick="openProjectModal('p4')">
+              <span>Inspect Project</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS: 3D FLOATING GALLERY WALL -->
+    <section id="certifications" class="section-padding">
+      <div class="section-header">
+        <span class="section-tag">CREDENTIALS</span>
+        <h2 class="section-title">CERTIFICATION WALL</h2>
+        <div class="section-line"></div>
+        <p class="section-desc">Verified credentials and specialized training in Machine Learning, Full-Stack Engineering, and Systems.</p>
+      </div>
+
+      <div class="cert-wall-grid">
+        <!-- 1. Foundations of Modern Machine Learning – IIIT Hyderabad -->
+        <div class="cert-glass-card tilt-element">
+          <div class="card-glass-reflection"></div>
+          <div class="cert-card-top">
+            <div class="cert-badge-icon iiit"><i class="fa-solid fa-brain"></i></div>
+            <span class="cert-org">IIIT Hyderabad</span>
+          </div>
+          <h3 class="cert-title">Foundations of Modern Machine Learning</h3>
+          <p class="cert-issuer">International Institute of Information Technology, Hyderabad</p>
+          <div class="cert-footer">
+            <span class="cert-pill"><i class="fa-solid fa-shield-halved"></i> Academic Certification</span>
+            <span class="cert-status">Verified</span>
+          </div>
+        </div>
+
+        <!-- 2. Machine Learning with Python – Infosys Springboard -->
+        <div class="cert-glass-card tilt-element">
+          <div class="card-glass-reflection"></div>
+          <div class="cert-card-top">
+            <div class="cert-badge-icon infosys"><i class="fa-brands fa-python"></i></div>
+            <span class="cert-org">Infosys Springboard</span>
+          </div>
+          <h3 class="cert-title">Machine Learning with Python</h3>
+          <p class="cert-issuer">Infosys Springboard Industry Curriculum</p>
+          <div class="cert-footer">
+            <span class="cert-pill"><i class="fa-solid fa-certificate"></i> Specialized Skill</span>
+            <span class="cert-status">Verified</span>
+          </div>
+        </div>
+
+        <!-- 3. Microchip Embedded System Developer Virtual Internship – EduSkills -->
+        <div class="cert-glass-card tilt-element">
+          <div class="card-glass-reflection"></div>
+          <div class="cert-card-top">
+            <div class="cert-badge-icon eduskills"><i class="fa-solid fa-microchip"></i></div>
+            <span class="cert-org">EduSkills / Microchip</span>
+          </div>
+          <h3 class="cert-title">Microchip Embedded System Developer</h3>
+          <p class="cert-issuer">EduSkills Academy Virtual Internship Program</p>
+          <div class="cert-footer">
+            <span class="cert-pill"><i class="fa-solid fa-microchip"></i> Embedded Systems</span>
+            <span class="cert-status">Verified</span>
+          </div>
+        </div>
+
+        <!-- 4. Python Full Stack Developer Virtual Internship – EduSkills -->
+        <div class="cert-glass-card tilt-element">
+          <div class="card-glass-reflection"></div>
+          <div class="cert-card-top">
+            <div class="cert-badge-icon eduskills"><i class="fa-solid fa-code"></i></div>
+            <span class="cert-org">EduSkills Academy</span>
+          </div>
+          <h3 class="cert-title">Python Full Stack Developer</h3>
+          <p class="cert-issuer">EduSkills Virtual Internship Completion</p>
+          <div class="cert-footer">
+            <span class="cert-pill"><i class="fa-solid fa-laptop-code"></i> Full Stack Web</span>
+            <span class="cert-status">Verified</span>
+          </div>
+        </div>
+
+        <!-- 5. Introduction to Networking for Cyber Professionals – Zscaler Academy -->
+        <div class="cert-glass-card tilt-element">
+          <div class="card-glass-reflection"></div>
+          <div class="cert-card-top">
+            <div class="cert-badge-icon zscaler"><i class="fa-solid fa-network-wired"></i></div>
+            <span class="cert-org">Zscaler Academy</span>
+          </div>
+          <h3 class="cert-title">Introduction to Networking for Cyber Professionals</h3>
+          <p class="cert-issuer">Zscaler Academy Cybersecurity Curriculum</p>
+          <div class="cert-footer">
+            <span class="cert-pill"><i class="fa-solid fa-lock"></i> Networking &amp; Security</span>
+            <span class="cert-status">Verified</span>
+          </div>
+        </div>
+
+        <!-- 6. Introduction to HTML – Coursera Project Network -->
+        <div class="cert-glass-card tilt-element">
+          <div class="card-glass-reflection"></div>
+          <div class="cert-card-top">
+            <div class="cert-badge-icon coursera"><i class="fa-brands fa-html5"></i></div>
+            <span class="cert-org">Coursera</span>
+          </div>
+          <h3 class="cert-title">Introduction to HTML</h3>
+          <p class="cert-issuer">Coursera Project Network Guided Mastery</p>
+          <div class="cert-footer">
+            <span class="cert-pill"><i class="fa-solid fa-code"></i> Semantic Web</span>
+            <span class="cert-status">Verified</span>
+          </div>
+        </div>
+
+        <!-- 7. JavaScript Fundamentals – Ship That Code -->
+        <div class="cert-glass-card tilt-element">
+          <div class="card-glass-reflection"></div>
+          <div class="cert-card-top">
+            <div class="cert-badge-icon shipcode"><i class="fa-brands fa-js"></i></div>
+            <span class="cert-org">Ship That Code</span>
+          </div>
+          <h3 class="cert-title">JavaScript Fundamentals</h3>
+          <p class="cert-issuer">Ship That Code Engineering Standards</p>
+          <div class="cert-footer">
+            <span class="cert-pill"><i class="fa-solid fa-bolt"></i> Modern JavaScript</span>
+            <span class="cert-status">Verified</span>
+          </div>
+        </div>
+
+        <!-- 8. SQL Fundamentals – Ship That Code -->
+        <div class="cert-glass-card tilt-element">
+          <div class="card-glass-reflection"></div>
+          <div class="cert-card-top">
+            <div class="cert-badge-icon shipcode"><i class="fa-solid fa-database"></i></div>
+            <span class="cert-org">Ship That Code</span>
+          </div>
+          <h3 class="cert-title">SQL Fundamentals</h3>
+          <p class="cert-issuer">Ship That Code Relational Query Architecture</p>
+          <div class="cert-footer">
+            <span class="cert-pill"><i class="fa-solid fa-database"></i> Data Querying</span>
+            <span class="cert-status">Verified</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS: FUTURISTIC GLASS DASHBOARD -->
+    <section id="achievements" class="section-padding">
+      <div class="section-header">
+        <span class="section-tag">VERIFIED MILESTONES</span>
+        <h2 class="section-title">ACHIEVEMENTS DASHBOARD</h2>
+        <div class="section-line"></div>
+        <p class="section-desc">Concrete metrics based strictly on proven academic and engineering trajectory.</p>
+      </div>
+
+      <div class="achievements-dashboard">
+        <!-- Metric 1: 5+ Internships -->
+        <div class="achievement-metric-card tilt-element">
+          <div class="card-glass-reflection"></div>
+          <div class="metric-icon-wrap">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <div class="metric-counter" data-target="5">5<span>+</span></div>
+          <div class="metric-title">INTERNSHIP EXPERIENCES</div>
+          <p class="metric-subtitle">Sirionex, ApexPlanet, Cognifyz &amp; EduSkills Virtual Residencies</p>
+        </div>
+
+        <!-- Metric 2: 4+ Projects -->
+        <div class="achievement-metric-card tilt-element">
+          <div class="card-glass-reflection"></div>
+          <div class="metric-icon-wrap">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <div class="metric-counter" data-target="4">4<span>+</span></div>
+          <div class="metric-title">ENGINEERED PROJECTS</div>
+          <p class="metric-subtitle">Frontend Web, Interactive Gaming, Vision &amp; Chrome Tooling</p>
+        </div>
+
+        <!-- Metric 3: AI / ML Experience -->
+        <div class="achievement-metric-card tilt-element">
+          <div class="card-glass-reflection"></div>
+          <div class="metric-icon-wrap">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <div class="metric-counter-static">AI / ML</div>
+          <div class="metric-title">MACHINE LEARNING SPECIALIZATION</div>
+          <p class="metric-subtitle">IIIT Hyderabad &amp; Infosys Springboard Foundations</p>
+        </div>
+
+        <!-- Metric 4: Frontend Experience -->
+        <div class="achievement-metric-card tilt-element">
+          <div class="card-glass-reflection"></div>
+          <div class="metric-icon-wrap">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <div class="metric-counter-static">MODERN</div>
+          <div class="metric-title">FRONTEND DEVELOPMENT</div>
+          <p class="metric-subtitle">Interactive Web, Responsive UI &amp; Modern Vanilla Stack</p>
+        </div>
+
+        <!-- Metric 5: Computer Vision Projects -->
+        <div class="achievement-metric-card tilt-element span-full-card">
+          <div class="card-glass-reflection"></div>
+          <div class="metric-icon-wrap">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <div class="metric-counter-static">OPENCV</div>
+          <div class="metric-title">COMPUTER VISION PROJECTS</div>
+          <p class="metric-subtitle">Face recognition automated attendance algorithms and real-time visual landmark tracking</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME SECTION: 3D FLOATING GLASS DOCUMENT VIEWER -->
+    <section id="resume" class="section-padding">
+      <div class="section-header">
+        <span class="section-tag">CREDENTIAL DOSSIER</span>
+        <h2 class="section-title">MY RESUME</h2>
+        <div class="section-line"></div>
+        <p class="section-desc">Inspect verified academic credentials, internships, skills, and project accomplishments.</p>
+      </div>
+
+      <div class="resume-showcase-container">
+        <!-- 3D Floating Glass Document Viewer -->
+        <div class="resume-3d-document tilt-element" id="resumeDoc">
+          <div class="card-glass-reflection"></div>
+          <div class="resume-paper-header">
+            <div class="resume-person-info">
+              <h3 class="resume-candidate-name">Magi Sri Rama Satya Ganesh</h3>
+              <p class="resume-candidate-title">Computer Science &amp; Artificial Intelligence Graduate</p>
+              <div class="resume-contact-row">
+                <span><i class="fa-solid fa-location-dot"></i> Kakinada, India</span>
+                <span><i class="fa-solid fa-graduation-cap"></i> KIET (CGPA: 7.4/10)</span>
+              </div>
+            </div>
+            <div class="resume-badge-stamp">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>VERIFIED PROFILE</span>
+            </div>
+          </div>
+
+          <div class="resume-divider"></div>
+
+          <!-- Document Mini Layout Preview -->
+          <div class="resume-document-grid">
+            <div class="resume-doc-col">
+              <h5 class="doc-sec-title"><i class="fa-solid fa-briefcase"></i> Internships</h5>
+              <ul class="doc-list">
+                <li><strong>Sirionex:</strong> Software Developer Intern (May 2026 – Aug 2026)</li>
+                <li><strong>ApexPlanet Software:</strong> Web Development Intern</li>
+                <li><strong>Cognifyz Technologies:</strong> Frontend Development Intern</li>
+                <li><strong>EduSkills:</strong> Microchip Embedded System Developer</li>
+                <li><strong>EduSkills:</strong> Python Full Stack Developer</li>
+              </ul>
+
+              <h5 class="doc-sec-title"><i class="fa-solid fa-diagram-project"></i> Core Projects</h5>
+              <ul class="doc-list">
+                <li><strong>Anime Website:</strong> Modern frontend interactive showcase</li>
+                <li><strong>Catch The Zoro:</strong> Event-driven browser-based game</li>
+                <li><strong>Face Recognition Attendance:</strong> Python OpenCV automation</li>
+                <li><strong>Link Saver:</strong> Chrome extension with link management</li>
+              </ul>
+            </div>
+
+            <div class="resume-doc-col">
+              <h5 class="doc-sec-title"><i class="fa-solid fa-code"></i> Technical Stack</h5>
+              <div class="doc-pills">
+                <span>Python</span><span>SQL</span><span>HTML</span><span>CSS</span>
+                <span>JavaScript</span><span>Machine Learning</span><span>Computer Vision</span>
+                <span>Git</span><span>GitHub</span><span>Chrome Extensions</span>
+              </div>
+
+              <h5 class="doc-sec-title"><i class="fa-solid fa-certificate"></i> Certifications</h5>
+              <ul class="doc-list">
+                <li>Foundations of Modern ML – IIIT Hyderabad</li>
+                <li>ML with Python – Infosys Springboard</li>
+                <li>Networking for Cyber – Zscaler Academy</li>
+                <li>JavaScript &amp; SQL Fundamentals – Ship That Code</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="resume-actions-bar">
+            <button class="btn-glass primary-glass-btn" id="viewResumeModalBtn">
+              <i class="fa-solid fa-eye"></i>
+              <span>VIEW FULL RESUME</span>
+            </button>
+            <button class="btn-glass secondary-glass-btn" id="downloadResumeBtn">
+              <i class="fa-solid fa-download"></i>
+              <span>DOWNLOAD RESUME</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION: FUTURISTIC COMMUNICATION CHAMBER -->
+    <section id="contact" class="section-padding">
+      <div class="section-header">
+        <span class="section-tag">COMMUNICATION NEXUS</span>
+        <h2 class="section-title">LET'S BUILD SOMETHING.</h2>
+        <div class="section-line"></div>
+        <p class="section-desc">Have an idea, opportunity, or project? Let's connect.</p>
+      </div>
+
+      <div class="contact-chamber-grid">
+        <!-- Direct Telemetry Info Cards -->
+        <div class="contact-info-panel">
+          <div class="glass-card contact-card tilt-element">
+            <div class="card-glass-reflection"></div>
+            <div class="contact-icon-bubble"><i class="fa-solid fa-satellite-dish"></i></div>
+            <h3 class="contact-card-title">Direct Connection</h3>
+            <p class="contact-card-desc">Reach out directly for software development opportunities, AI/ML inquiries, or frontend collaborations.</p>
+            
+            <div class="contact-links-list">
+              <!-- Email Item -->
+              <div class="contact-channel-item" onclick="copyContactInfo('email')">
+                <div class="channel-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="channel-details">
+                  <span class="channel-name">Email Contact</span>
+                  <span class="channel-value" id="emailVal">ganesh.magi.dev@gmail.com</span>
+                </div>
+                <button class="channel-action" title="Copy Email"><i class="fa-regular fa-copy"></i></button>
+              </div>
+
+              <!-- LinkedIn Item (No fake URLs) -->
+              <div class="contact-channel-item" onclick="handleSocialClick('LinkedIn')">
+                <div class="channel-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="channel-details">
+                  <span class="channel-name">LinkedIn Profile</span>
+                  <span class="channel-value">Magi Sri Rama Satya Ganesh</span>
+                </div>
+                <button class="channel-action"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+              </div>
+
+              <!-- GitHub Item (No fake URLs) -->
+              <div class="contact-channel-item" onclick="handleSocialClick('GitHub')">
+                <div class="channel-icon"><i class="fa-brands fa-github"></i></div>
+                <div class="channel-details">
+                  <span class="channel-name">GitHub Profile</span>
+                  <span class="channel-value">Ganesh-Dev-Profile</span>
+                </div>
+                <button class="channel-action"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+              </div>
+            </div>
+            
+            <div class="chamber-status-bar">
+              <span class="status-pulse-green"></span>
+              <span>CHAMBER ONLINE • ENCRYPTION: ACTIVE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Glass Contact Form -->
+        <div class="contact-form-panel">
+          <div class="glass-card contact-form-card tilt-element">
+            <div class="card-glass-reflection"></div>
+            <h3 class="form-title">Transmit a Message</h3>
+            
+            <form id="contactForm" onsubmit="handleFormSubmit(event)" novalidate>
+              <div class="form-group">
+                <label for="senderName" class="form-label">
+                  <i class="fa-regular fa-user"></i> Your Name
+                </label>
+                <input type="text" id="senderName" name="name" class="glass-input" placeholder="e.g. Satya Nadella" required autocomplete="name">
+                <span class="input-error" id="nameError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail" class="form-label">
+                  <i class="fa-regular fa-envelope"></i> Your Email Address
+                </label>
+                <input type="email" id="senderEmail" name="email" class="glass-input" placeholder="name@company.com" required autocomplete="email">
+                <span class="input-error" id="emailError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage" class="form-label">
+                  <i class="fa-regular fa-comment-dots"></i> Project Brief / Message
+                </label>
+                <textarea id="senderMessage" name="message" class="glass-input glass-textarea" rows="4" placeholder="Hello Ganesh, I loved your portfolio and would like to discuss an opportunity..." required></textarea>
+                <span class="input-error" id="messageError"></span>
+              </div>
+
+              <button type="submit" class="btn-glass primary-glass-btn full-width-btn" id="sendBtn">
+                <span class="btn-text">SEND MESSAGE &rarr;</span>
+                <i class="fa-solid fa-paper-plane btn-icon"></i>
+                <span class="btn-shimmer"></span>
+              </button>
+            </form>
+
+            <div class="form-success-banner" id="formSuccess">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <h4>Message Transmitted Successfully!</h4>
+                <p>Thank you for reaching out. Ganesh will get back to you shortly.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="glass-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="footer-logo">GANESH<span class="accent-dot">.DEV</span></span>
+        <p class="footer-tagline">Engineered at the intersection of Code &amp; AI.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-copy">
+        <p>&copy; 2026 Magi Sri Rama Satya Ganesh. All rights reserved.</p>
+        <p class="footer-sub">Designed with Glassmorphism, 3D Canvas &amp; High-End Interactive UI.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULL-SCREEN GLASS PROJECT MODAL -->
+  <div class="glass-modal-backdrop" id="projectModal" aria-hidden="true" role="dialog">
+    <div class="glass-modal-container">
+      <div class="modal-card-reflection"></div>
+      <button class="modal-close-btn" id="modalCloseBtn" onclick="closeProjectModal()" aria-label="Close dialog">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-content" id="modalContent">
+        <!-- Dynamically populated via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL-SCREEN RESUME VIEWER MODAL -->
+  <div class="glass-modal-backdrop" id="resumeModal" aria-hidden="true" role="dialog">
+    <div class="glass-modal-container resume-modal-size">
+      <div class="modal-card-reflection"></div>
+      <button class="modal-close-btn" onclick="closeResumeModal()" aria-label="Close resume viewer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="resume-modal-body">
+        <div class="resume-modal-header">
+          <div>
+            <h3 class="modal-res-name">Magi Sri Rama Satya Ganesh</h3>
+            <p class="modal-res-sub">Computer Science &amp; Artificial Intelligence Graduate • KIET (CGPA: 7.4 / 10)</p>
+          </div>
+          <button class="btn-glass secondary-glass-btn btn-sm" onclick="triggerResumeDownload()">
+            <i class="fa-solid fa-file-pdf"></i> Download PDF
+          </button>
+        </div>
+
+        <div class="resume-modal-sections">
+          <!-- Section 1 -->
+          <div class="res-sec-block">
+            <h4><i class="fa-solid fa-user-graduate"></i> Academic Profile</h4>
+            <p><strong>Bachelor of Technology in Computer Science &amp; Artificial Intelligence</strong></p>
+            <p class="res-inst">Kakinada Institute of Engineering and Technology (KIET) | CGPA: <strong>7.4 / 10</strong></p>
+          </div>
+
+          <!-- Section 2 -->
+          <div class="res-sec-block">
+            <h4><i class="fa-solid fa-briefcase"></i> Professional Internship Experiences</h4>
+            <div class="res-entry">
+              <div class="res-entry-head">
+                <strong>Sirionex</strong> — Software Developer Intern
+                <span class="res-date">May 2026 – Aug 2026</span>
+              </div>
+              <p>Contributed to software development lifecycles, backend logic, and scalable code implementations.</p>
+            </div>
+            <div class="res-entry">
+              <div class="res-entry-head">
+                <strong>ApexPlanet Software Pvt. Ltd.</strong> — Web Development Intern
+              </div>
+              <p>Engineered clean, responsive websites, component structures, and cross-browser interfaces.</p>
+            </div>
+            <div class="res-entry">
+              <div class="res-entry-head">
+                <strong>Cognifyz Technologies</strong> — Frontend Development Intern
+              </div>
+              <p>Developed interactive web features, enhanced user experience, and optimized DOM rendering speeds.</p>
+            </div>
+            <div class="res-entry">
+              <div class="res-entry-head">
+                <strong>EduSkills</strong> — Microchip Embedded System Developer Virtual Internship
+              </div>
+              <p>Completed intensive training in microcontroller architecture and embedded software interfaces.</p>
+            </div>
+            <div class="res-entry">
+              <div class="res-entry-head">
+                <strong>EduSkills</strong> — Python Full Stack Developer Virtual Internship
+              </div>
+              <p>Built full stack applications using Python backend logic and modern frontend web principles.</p>
+            </div>
+          </div>
+
+          <!-- Section 3 -->
+          <div class="res-sec-block">
+            <h4><i class="fa-solid fa-laptop-code"></i> Highlight Projects</h4>
+            <div class="res-entry">
+              <strong>1. Anime Website:</strong> Modern frontend interactive web app presenting anime content through modern glass UI.
+            </div>
+            <div class="res-entry">
+              <strong>2. Catch The Zoro:</strong> Fast-paced interactive browser game created using modern frontend technologies.
+            </div>
+            <div class="res-entry">
+              <strong>3. Face Recognition Attendance System:</strong> Python &amp; computer vision solution automating real-time attendance recording.
+            </div>
+            <div class="res-entry">
+              <strong>4. Link Saver:</strong> Productivity Chrome extension for saving, organizing, and accessing browser links effortlessly.
+            </div>
+          </div>
+
+          <!-- Section 4 -->
+          <div class="res-sec-block">
+            <h4><i class="fa-solid fa-certificate"></i> Key Certifications</h4>
+            <ul class="res-bullet-list">
+              <li>Foundations of Modern Machine Learning – IIIT Hyderabad</li>
+              <li>Machine Learning with Python – Infosys Springboard</li>
+              <li>Microchip Embedded System Developer Virtual Internship – EduSkills</li>
+              <li>Python Full Stack Developer Virtual Internship – EduSkills</li>
+              <li>Introduction to Networking for Cyber Professionals – Zscaler Academy</li>
+              <li>Introduction to HTML – Coursera Project Network</li>
+              <li>JavaScript Fundamentals – Ship That Code</li>
+              <li>SQL Fundamentals – Ship That Code</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- THREE.JS VIA CDN FOR 3D AI HOLOGRAPHIC ORB & PARTICLES -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <!-- JAVASCRIPT MODULES -->
+  <script src="js/three-scene.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
